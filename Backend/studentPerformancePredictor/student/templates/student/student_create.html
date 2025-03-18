@@ -1,0 +1,27 @@
+{% extends "layout/main.html" %}
+
+{% block title %}
+Student-creation Form
+{% endblock title %}
+
+{% block style %}
+
+
+{% endblock style %}
+
+
+{% block content %}
+<div class="student_create">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+      </form>
+</div>
+
+{% endblock content %}
+
+{% block script %}
+
+{% endblock script %}
+

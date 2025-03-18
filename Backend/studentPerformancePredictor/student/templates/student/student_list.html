@@ -1,0 +1,38 @@
+{% extends "layout/main.html" %}
+
+{% block title %}
+Students-list-{{block.super}}
+{% endblock title %}
+
+{% block style %}
+
+
+{% endblock style %}
+
+
+{% block content %}
+
+<a href={% url 'create_student' %}>createstudent</a>
+<a href={% url 'create_teacher' %}>createteacher</a>
+<p>This is an page for student_list</p>
+{% for student in students %}
+    <div>
+       <a href={% url 'student_delete' student.student_id %}>Delete</a>
+       <h1> {{student.student_id}}</h1>
+       <p> {{student.first_name}}</p>
+        {{student.last_name}}
+        {{student.gender}}
+        <hr>
+    </div>
+
+
+
+{% endfor %}
+
+
+{% endblock content %}
+
+{% block script %}
+
+{% endblock script %}
+
