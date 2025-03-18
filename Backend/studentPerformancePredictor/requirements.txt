@@ -1,2 +1,3 @@
 django-allauth
 django-allauth[socialaccount]
+pymysql
